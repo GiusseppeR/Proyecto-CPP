@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "extern/cgal-5.6.1/Documentation/doc",
+		"source" : "extern/cgal-5.6.1/Documentation/doc"
+	}
+}

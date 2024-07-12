@@ -1,0 +1,386 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						8,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "extern",
+					"childIndexes" : 
+					[
+						2,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern-Debug-88bde94350c4fc5056f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "extern"
+				},
+				{
+					"build" : "extern/googletest",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.googletest-Debug-1d8be3aa16eba54394d3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "extern/googletest"
+				},
+				{
+					"build" : "extern/googletest/googlemock",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.googletest.googlemock-Debug-64313bc11ec455db9806.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "extern/googletest/googlemock",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"build" : "extern/googletest/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.googletest.googletest-Debug-bb8309aeee1928986e43.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "extern/googletest/googletest",
+					"targetIndexes" : 
+					[
+						7,
+						8
+					]
+				},
+				{
+					"build" : "extern/cgal-5.6.1",
+					"childIndexes" : 
+					[
+						6,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.cgal-5.6.1-Debug-4ee0f5ecb536751d0fc7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "extern/cgal-5.6.1",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "extern/cgal-5.6.1/Installation",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.cgal-5.6.1.Installation-Debug-54feb2271fb626099a0d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 4,
+					"source" : "extern/cgal-5.6.1/Installation",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4,
+						9,
+						11
+					]
+				},
+				{
+					"build" : "extern/cgal-5.6.1/Documentation/doc",
+					"jsonFile" : "directory-extern.cgal-5.6.1.Documentation.doc-Debug-3191ff66edc1533316c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 5,
+					"source" : "extern/cgal-5.6.1/Documentation/doc"
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-f18be1977b403cfd1a50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						8,
+						9
+					],
+					"name" : "Tarea3",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						10
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "gmock",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "gtest",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						7,
+						8
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						5
+					],
+					"directoryIndexes" : 
+					[
+						5,
+						6
+					],
+					"name" : "CGAL",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4,
+						9,
+						11,
+						12
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "Documentation",
+					"parentIndex" : 4
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 6,
+					"id" : "ALL_CGAL_TARGETS::@b843e1b407141b0bc3ed",
+					"jsonFile" : "target-ALL_CGAL_TARGETS-Debug-3ddfa0e7afa69658544d.json",
+					"name" : "ALL_CGAL_TARGETS",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "MeshesTest::@36f028580bb02cc8272a",
+					"jsonFile" : "target-MeshesTest-Debug-a4ced09f78328af28c4c.json",
+					"name" : "MeshesTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tarea3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tarea3-Debug-1ddd9404ba99b3bbe1c9.json",
+					"name" : "Tarea3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "demos::@b843e1b407141b0bc3ed",
+					"jsonFile" : "target-demos-Debug-f7cd60f8a5f517297cde.json",
+					"name" : "demos",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "examples::@b843e1b407141b0bc3ed",
+					"jsonFile" : "target-examples-Debug-50908f9d3a6f1fead55e.json",
+					"name" : "examples",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gmock::@0ba0acb845faf95c7eab",
+					"jsonFile" : "target-gmock-Debug-2c7e76f9d38411cc82ee.json",
+					"name" : "gmock",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gmock_main::@0ba0acb845faf95c7eab",
+					"jsonFile" : "target-gmock_main-Debug-0eeb5d526e2499b57d8e.json",
+					"name" : "gmock_main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gtest::@cd6fe4ca901feadd7fe5",
+					"jsonFile" : "target-gtest-Debug-13b05f1696531bfd17dd.json",
+					"name" : "gtest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gtest_main::@cd6fe4ca901feadd7fe5",
+					"jsonFile" : "target-gtest_main-Debug-2a3f93191e5cfe5cc4ce.json",
+					"name" : "gtest_main",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "install_FindCGAL::@b843e1b407141b0bc3ed",
+					"jsonFile" : "target-install_FindCGAL-Debug-3a894fa785a45f6c5afe.json",
+					"name" : "install_FindCGAL",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "meshes::@145eef247bfb46b6828c",
+					"jsonFile" : "target-meshes-Debug-97c19087d0d936e7a9f2.json",
+					"name" : "meshes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "tests::@b843e1b407141b0bc3ed",
+					"jsonFile" : "target-tests-Debug-6ebcc0e70d6d4cc95f9a.json",
+					"name" : "tests",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "uninstall::@3fe46814379655f01210",
+					"jsonFile" : "target-uninstall-Debug-585e1c6bfb1837a11d3e.json",
+					"name" : "uninstall",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Escritorio/ProyectoBase/cmake-build-debug",
+		"source" : "D:/Escritorio/ProyectoBase"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

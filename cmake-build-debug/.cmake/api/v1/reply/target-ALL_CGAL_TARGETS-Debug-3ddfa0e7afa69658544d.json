@@ -1,0 +1,88 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies",
+			"add_programs"
+		],
+		"files" : 
+		[
+			"extern/cgal-5.6.1/Installation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 813,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 841,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 821,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 842,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 821,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 844,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 821,
+				"parent" : 6
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "examples::@b843e1b407141b0bc3ed"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "demos::@b843e1b407141b0bc3ed"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "tests::@b843e1b407141b0bc3ed"
+		}
+	],
+	"id" : "ALL_CGAL_TARGETS::@b843e1b407141b0bc3ed",
+	"name" : "ALL_CGAL_TARGETS",
+	"paths" : 
+	{
+		"build" : "extern/cgal-5.6.1/Installation",
+		"source" : "extern/cgal-5.6.1/Installation"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

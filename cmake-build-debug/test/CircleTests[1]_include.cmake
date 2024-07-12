@@ -1,0 +1,5 @@
+if(EXISTS "D:/Escritorio/ProyectoBase/cmake-build-debug/test/CircleTests[1]_tests.cmake")
+  include("D:/Escritorio/ProyectoBase/cmake-build-debug/test/CircleTests[1]_tests.cmake")
+else()
+  add_test(CircleTests_NOT_BUILT CircleTests_NOT_BUILT)
+endif()

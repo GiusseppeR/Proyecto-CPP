@@ -1,0 +1,334 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/giuss/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"path" : "extern/CMakeLists.txt"
+		},
+		{
+			"path" : "extern/googletest/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "extern/googletest/googlemock/CMakeLists.txt"
+		},
+		{
+			"path" : "extern/googletest/googlemock/cmake/gmock.pc.in"
+		},
+		{
+			"path" : "extern/googletest/googlemock/cmake/gmock_main.pc.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/CMakeLists.txt"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/internal_utils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython/Support.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/Config.cmake.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/gtest.pc.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/gtest_main.pc.in"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/CMakeLists.txt"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/CGALConfigVersion.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/lib/cmake/CGAL/CGALConfigVersion.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/lib/cmake/CGAL/CGALConfigBuildVersion.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_SCM.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_enable_end_of_configuration_hook.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/cmake_uninstall.cmake.in"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/config/version.h.in"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_Macros.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_VersionUtils.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_enable_end_of_configuration_hook.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_Common.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_Macros.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_SetupVLD.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_GeneratorSpecificSettings.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_CheckCXXFileRuns.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_add_test.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseArguments.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/config/support/print_GCC_version.cpp"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGAL_display_flags.cmake"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGALConfig_binary_header_only.cmake.in"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Installation/cmake/modules/CGALConfigVersion_binary_header_only.cmake.in"
+		},
+		{
+			"path" : "extern/cgal-5.6.1/Documentation/doc/CMakeLists.txt"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"path" : "test/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GoogleTest.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "D:/Escritorio/ProyectoBase/cmake-build-debug",
+		"source" : "D:/Escritorio/ProyectoBase"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

@@ -1,0 +1,2429 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"extern/cgal-5.6.1/Installation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 649,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 651,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 652,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 725,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 733,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 741,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 755,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 757,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 770,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 784,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "CGAL_Qt5",
+			"destination" : "include/CGAL/Qt",
+			"paths" : 
+			[
+				{
+					"from" : "extern/cgal-5.6.1/GraphicsView/include/CGAL/Qt",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "CGAL_Qt5",
+			"destination" : "lib/cmake/CGAL/demo/resources",
+			"paths" : 
+			[
+				{
+					"from" : "extern/cgal-5.6.1/GraphicsView/demo/resources",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "CGAL_Qt5",
+			"destination" : "lib/cmake/CGAL/demo/icons",
+			"paths" : 
+			[
+				{
+					"from" : "extern/cgal-5.6.1/GraphicsView/demo/icons",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "share/doc/CGAL",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Installation/AUTHORS",
+				"extern/cgal-5.6.1/Installation/CHANGES.md",
+				"extern/cgal-5.6.1/Installation/LICENSE",
+				"extern/cgal-5.6.1/Installation/LICENSE.GPL",
+				"extern/cgal-5.6.1/Installation/LICENSE.LGPL"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/AABB_tree/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Advancing_front_surface_reconstruction/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Algebraic_foundations/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Algebraic_kernel_d/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Algebraic_kernel_for_circles/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Algebraic_kernel_for_spheres/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Alpha_shapes_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Alpha_shapes_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Alpha_wrap_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Apollonius_graph_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Arithmetic_kernel/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Arrangement_on_surface_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 17,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/BGL/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Barycentric_coordinates_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 19,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Boolean_set_operations_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Bounding_volumes/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 21,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Box_intersection_d/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 22,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/CGAL_Core/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 23,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/CGAL_ImageIO/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 24,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/CGAL_ipelets/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 25,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Cartesian_kernel/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 26,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Circular_kernel_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 27,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Circular_kernel_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 28,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Circulator/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 29,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Classification/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 30,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Combinatorial_map/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 31,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Cone_spanners_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 32,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Convex_decomposition_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 33,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Convex_hull_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 34,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Convex_hull_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 35,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Convex_hull_d/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 36,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Distance_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 37,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Distance_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 38,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Envelope_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 39,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Envelope_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 40,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Filtered_kernel/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 41,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Generalized_map/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 42,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Generator/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 43,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/GraphicsView/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 44,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/HalfedgeDS/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 45,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Hash_map/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 46,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Heat_method_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 47,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Homogeneous_kernel/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 48,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Hyperbolic_triangulation_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 49,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Inscribed_areas/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 50,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Installation/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 51,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Interpolation/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 52,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Intersections_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 53,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Intersections_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 54,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Interval_skip_list/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 55,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Interval_support/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 56,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Jet_fitting_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 57,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Kernel_23/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 58,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Kernel_d/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 59,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/LEDA/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 60,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Linear_cell_complex/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 61,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Matrix_search/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 62,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Mesh_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 63,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Mesh_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 64,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Mesher_level/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 65,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Minkowski_sum_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 66,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Minkowski_sum_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 67,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Modifier/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 68,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Modular_arithmetic/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 69,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Nef_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 70,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Nef_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 71,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Nef_S2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 72,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/NewKernel_d/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 73,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Number_types/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 74,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/OpenNL/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 75,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Optimal_bounding_box/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 76,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Optimal_transportation_reconstruction_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 77,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Optimisation_basic/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 78,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Orthtree/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 79,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Partition_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 80,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Periodic_2_triangulation_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 81,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Periodic_3_mesh_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 82,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Periodic_3_triangulation_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 83,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Periodic_4_hyperbolic_triangulation_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 84,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Point_set_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 85,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Point_set_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 86,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Point_set_processing_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 87,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Poisson_surface_reconstruction_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 88,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Polygon/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 89,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Polygon_mesh_processing/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 90,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Polygonal_surface_reconstruction/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 91,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Polyhedron/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 92,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Polyline_simplification_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 93,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Polynomial/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 94,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Polytope_distance_d/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 95,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Principal_component_analysis/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 96,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Principal_component_analysis_LGPL/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 97,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Profiling_tools/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 98,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Property_map/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 99,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/QP_solver/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 100,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Random_numbers/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 101,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Ridges_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 102,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/SMDS_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 103,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/STL_Extension/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 104,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Scale_space_reconstruction_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 105,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/SearchStructures/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 106,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Segment_Delaunay_graph_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 107,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Segment_Delaunay_graph_Linf_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 108,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Set_movable_separability_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 109,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Shape_detection/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 110,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Shape_regularization/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 111,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Skin_surface_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 112,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Snap_rounding_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 113,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Solver_interface/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 114,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Spatial_searching/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 115,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Spatial_sorting/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 116,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Straight_skeleton_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 117,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Straight_skeleton_extrusion_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 118,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Stream_lines_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 119,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Stream_support/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 120,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Subdivision_method_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 121,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 122,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_approximation/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 123,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_deformation/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 124,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_parameterization/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 125,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_segmentation/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 126,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_shortest_path/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 127,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_simplification/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 128,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_skeletonization/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 129,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesh_topology/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 130,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_mesher/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 131,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Surface_sweep_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 132,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/TDS_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 133,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/TDS_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 134,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Testsuite/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 135,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Tetrahedral_remeshing/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 136,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Three/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 137,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Triangulation/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 138,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Triangulation_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 139,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Triangulation_3/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 140,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Triangulation_on_sphere_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 141,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Union_find/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 142,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Visibility_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 143,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Voronoi_diagram_2/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 144,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Weights/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 145,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"cmake-build-debug/extern/cgal-5.6.1/include/CGAL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 146,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/CGAL",
+			"paths" : 
+			[
+				{
+					"from" : "extern/cgal-5.6.1/Installation/cmake/modules",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 147,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/CGAL",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Installation/cmake/modules/UseCGAL.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 148,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/CGAL",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Installation/lib/cmake/CGAL/CGALConfig.cmake",
+				"extern/cgal-5.6.1/Installation/lib/cmake/CGAL/CGALConfigBuildVersion.cmake",
+				"extern/cgal-5.6.1/Installation/lib/cmake/CGAL/CGALConfigVersion.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 149,
+			"component" : "Unspecified",
+			"destination" : "share/man/man1",
+			"paths" : 
+			[
+				"extern/cgal-5.6.1/Installation/auxiliary/cgal_create_cmake_script.1"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "extern/cgal-5.6.1/Installation",
+		"source" : "extern/cgal-5.6.1/Installation"
+	}
+}
