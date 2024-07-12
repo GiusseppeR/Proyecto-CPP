@@ -1,5 +1,5 @@
-if(EXISTS "D:/Escritorio/ProyectoBase/cmake-build-debug/test/MeshesTest[1]_tests.cmake")
-  include("D:/Escritorio/ProyectoBase/cmake-build-debug/test/MeshesTest[1]_tests.cmake")
+if(EXISTS "C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/test/MeshesTest[1]_tests.cmake")
+  include("C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/test/MeshesTest[1]_tests.cmake")
 else()
   add_test(MeshesTest_NOT_BUILT MeshesTest_NOT_BUILT)
 endif()
