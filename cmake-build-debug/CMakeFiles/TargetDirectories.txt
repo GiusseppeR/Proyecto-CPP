@@ -1,6 +1,0 @@
-C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/CMakeFiles/Proyecto.dir
-C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/src/CMakeFiles/meshes.dir
-C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/src/CMakeFiles/edit_cache.dir
-C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
