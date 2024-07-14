@@ -24,5 +24,4 @@ public:
         return os;
     }
 };
-
 #endif
