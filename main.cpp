@@ -1,6 +1,11 @@
-#include<iostream>
+#include <iostream>
+#include <Geometrics/Polyhedron.hpp>
+int main() {
+    std::vector<Point> vertices = {
+            {0, 0, 0}, {1, 0, 0}, {1, 1, 0}, {0, 1, 0},  // bottom face
+            {0, 0, 1}, {1, 0, 1}, {1, 1, 1}, {0, 1, 1}   // top face
+    };
+    Polyhedron P(vertices);
 
-int main(int argc, char const *argv[])
-{
     return 0;
 }
