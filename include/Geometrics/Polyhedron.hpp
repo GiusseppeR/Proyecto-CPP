@@ -1,36 +1,30 @@
 #ifndef POLYHEDRON_H
 #define POLYHEDRON_H
 
-#include "Point.hpp"
+#include "Triangle.hpp"
 #include <iostream>
 #include <vector>
 
 class Polyhedron {
 private:
-    std::vector<Point> vertices;
-    int _numberOfVertices;
+    std::vector<Triangle> faces;
+    int _numberOfFaces;
     double _volume;
 
 public:
-    Polyhedron(std::vector<Point> initVertices);
+    Polyhedron(std::vector<Triangle> initFaces);
 
     int numberOfVertices();
     int numberOfFaces();
     double volume();
-    std::vector<Point> sortedVertices() const;
 
-    Point& operator[](int i);
-    bool operator==(const Polyhedron& other) const;
+    Triangle& operator[](int i);
     std::string toString();
 
     friend std::ostream& operator<<(std::ostream& os, const Polyhedron& p){
-        os << "[";
-        for (int i = 0; i < p._numberOfVertices; i++){
-            os << p.vertices[i];
-            if (i != p._numberOfVertices -1)
-                os << ",";
+        for (auto triangle : p.faces){
+            os << triangle << std::endl;
         }
-        os << "]";
         return os;
     }
 };
