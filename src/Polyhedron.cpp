@@ -1,9 +1,11 @@
 #include <Geometrics/Polyhedron.hpp>
 #include <algorithm>
+#include <cmath>
 
 Polyhedron::Polyhedron(std::vector<Triangle> initFaces) {
     faces = initFaces;
     _numberOfFaces = faces.size();
+    _volume = -1;
 }
 
 int Polyhedron::numberOfFaces() {
@@ -24,10 +26,13 @@ std::string Polyhedron::toString() {
 }
 
 double Polyhedron::volume() {
+    if (_volume != -1)
+        return _volume;
     double volume = 0;
     for(auto triangle : faces){
         Point A = triangle[0];
-        volume += A * triangle.normal();
+        volume += fabs(A * triangle.normal());
     }
-    return volume/6;
+    _volume = volume/6;
+    return _volume;
 }

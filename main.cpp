@@ -30,7 +30,9 @@ int main() {
 
 int main() {
     TriangleParser triangles("../polyhedron.txt");
-
+    auto t = triangles.triangles;
+    Polyhedron P(t);
+    std::cout << P.volume() << std::endl;
     return 0;
 }
 
