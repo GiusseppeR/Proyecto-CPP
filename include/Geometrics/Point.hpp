@@ -4,17 +4,13 @@
 #include <iostream>
 
 class Point {
-private:
-    double _x;
-    double _y;
-    double _z;
 public:
-    Point (): _x(0), _y(0), _z(0) {}
-    Point(double x, double y, double z): _x(x), _y(y), _z(z) {}
+    double x;
+    double y;
+    double z;
 
-    double x() const;
-    double y() const;
-    double z() const;
+    Point (): x(0), y(0), z(0) {}
+    Point(double x, double y, double z): x(x), y(y), z(z) {}
 
     double distance(Point target);
     double operator*(Point other);
@@ -24,7 +20,7 @@ public:
     bool operator==(const Point& other) const;
     std::string toString();
     friend std::ostream& operator<<(std::ostream& os, const Point& p){
-        os << "(" << p._x << "," << p._y << "," << p._z << ")";
+        os << "(" << p.x << "," << p.y << "," << p.z << ")";
         return os;
     }
 };

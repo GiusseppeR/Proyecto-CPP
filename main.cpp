@@ -29,10 +29,29 @@ int main() {
 #else
 
 int main() {
-    TriangleParser triangles("../polyhedron.txt");
-    auto t = triangles.triangles;
-    Polyhedron P(t);
-    std::cout << P.volume() << std::endl;
+    TriangleParser parser_tetra("../polyhedron.txt");
+
+    Polyhedron tetrahedron(parser_tetra.triangles);
+
+    std::cout << tetrahedron.volume() << std::endl;
+
+
+    if (tetrahedron.isPointInside(Point(0.2,0.2,0.2))) {
+        std::cout << "The point is inside the polyhedron.\n";
+    } else {
+        std::cout << "The point is outside the polyhedron.\n";
+    }
+
+    TriangleParser parser_hexa("../include/Polyhedra/polyhedron.txt");
+
+    Polyhedron hexahedron(parser_hexa.triangles);
+
+    if (hexahedron.isPointInside(Point(0.5,0.9,0.9))) {
+        std::cout << "The point is inside the polyhedron.\n";
+    } else {
+        std::cout << "The point is outside the polyhedron.\n";
+    }
+
     return 0;
 }
 

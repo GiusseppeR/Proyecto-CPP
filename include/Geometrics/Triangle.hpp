@@ -10,11 +10,18 @@ class Triangle{
 private:
     std::array<Point, 3> points;
 public:
+
+    // Constructors
     Triangle() = default;
     Triangle(Point A, Point B, Point C);
+
+    // Methods
     Point normal();
-    Point& operator[](int i);
+
+    Point& operator[](int i); // return Point of index i
+
     std::string toString();
+
     friend std::ostream& operator<<(std::ostream& os, const Triangle& p){
         os << "[";
         for (int i = 0; i < 3; i++){
