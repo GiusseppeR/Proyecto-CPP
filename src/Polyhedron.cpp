@@ -24,5 +24,10 @@ std::string Polyhedron::toString() {
 }
 
 double Polyhedron::volume() {
-    return 0;
+    double volume = 0;
+    for(auto triangle : faces){
+        Point A = triangle[0];
+        volume += A * triangle.normal();
+    }
+    return volume/6;
 }

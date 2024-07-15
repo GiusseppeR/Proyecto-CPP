@@ -11,6 +11,7 @@ private:
     std::array<Point, 3> points;
 public:
     Triangle(Point A, Point B, Point C);
+    Point normal();
     Point& operator[](int i);
     std::string toString();
     friend std::ostream& operator<<(std::ostream& os, const Triangle& p){

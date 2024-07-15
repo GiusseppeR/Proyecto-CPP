@@ -17,6 +17,10 @@ public:
     double z() const;
 
     double distance(Point target);
+    double operator*(Point other);
+    Point operator+(Point other);
+    Point operator-(Point other);
+    Point cross(Point other);
     bool operator==(const Point& other) const;
     std::string toString();
     friend std::ostream& operator<<(std::ostream& os, const Point& p){
