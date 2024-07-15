@@ -28,5 +28,4 @@ public:
         return os;
     }
 };
-
 #endif

@@ -10,6 +10,7 @@ class Triangle{
 private:
     std::array<Point, 3> points;
 public:
+    Triangle() = default;
     Triangle(Point A, Point B, Point C);
     Point normal();
     Point& operator[](int i);

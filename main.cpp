@@ -1,5 +1,9 @@
 #include <iostream>
 #include <Geometrics/Polyhedron.hpp>
+#include <Geometrics/Parser.hpp>
+
+
+#if 0
 int main() {
     std::vector<Point> v = {Point(0,0,0), Point(1,0,0),Point(0,1,0),Point(1,1,0),
                             Point(0,0,1), Point(1,0,1),Point(0,1,1),Point(1,1,1)};
@@ -21,3 +25,14 @@ int main() {
     std::cout << P.volume() << std::endl;
     return 0;
 }
+
+#else
+
+int main() {
+    TriangleParser triangles("../polyhedron.txt");
+
+    return 0;
+}
+
+
+#endif

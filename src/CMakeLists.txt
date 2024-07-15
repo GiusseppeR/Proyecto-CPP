@@ -4,6 +4,7 @@ set(HPP_LIST "${PROJECT_SOURCE_DIR}/include/Geometrics/Point.hpp"
 )
 set(CPP_LIST "Point.cpp"
         Polyhedron.cpp
+        Parser.cpp
         Triangle.cpp
 )
 
