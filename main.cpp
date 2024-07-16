@@ -1,33 +1,10 @@
 #include <iostream>
+#include <Geometrics/algorithms.hpp>
 #include <Geometrics/Polyhedron.hpp>
 #include <Geometrics/Parser.hpp>
 
 
 #if 0
-int main() {
-    std::vector<Point> v = {Point(0,0,0), Point(1,0,0),Point(0,1,0),Point(1,1,0),
-                            Point(0,0,1), Point(1,0,1),Point(0,1,1),Point(1,1,1)};
-    std::vector<Triangle> t = {
-            Triangle(v[0],v[1],v[3]),
-            Triangle(v[0],v[2],v[3]),
-            Triangle(v[4],v[5],v[7]),
-            Triangle(v[4],v[6],v[7]),
-            Triangle(v[0],v[4],v[5]),
-            Triangle(v[0],v[4],v[6]),
-            Triangle(v[0],v[1],v[5]),
-            Triangle(v[0],v[2],v[6]),
-            Triangle(v[3],v[7],v[5]),
-            Triangle(v[3],v[7],v[6]),
-            Triangle(v[3],v[1],v[5]),
-            Triangle(v[3],v[2],v[6])
-    };
-    Polyhedron P(t);
-    std::cout << P.volume() << std::endl;
-    return 0;
-}
-
-#else
-
 int main() {
     TriangleParser parser_tetra("../polyhedron.txt");
 
@@ -54,6 +31,91 @@ int main() {
 
     return 0;
 }
+
+#else
+Polyhedron createCube1() {
+    std::vector<Triangle> faces = {
+            // Front face
+            Triangle(Point(-0.5, -0.5, -0.5), Point(0.5, -0.5, -0.5), Point(0.5, 0.5, -0.5)),
+            Triangle(Point(-0.5, -0.5, -0.5), Point(0.5, 0.5, -0.5), Point(-0.5, 0.5, -0.5)),
+
+            // Back face
+            Triangle(Point(-0.5, -0.5, 0.5), Point(0.5, -0.5, 0.5), Point(0.5, 0.5, 0.5)),
+            Triangle(Point(-0.5, -0.5, 0.5), Point(0.5, 0.5, 0.5), Point(-0.5, 0.5, 0.5)),
+
+            // Bottom face
+            Triangle(Point(-0.5, -0.5, -0.5), Point(0.5, -0.5, -0.5), Point(0.5, -0.5, 0.5)),
+            Triangle(Point(-0.5, -0.5, -0.5), Point(0.5, -0.5, 0.5), Point(-0.5, -0.5, 0.5)),
+
+            // Top face
+            Triangle(Point(-0.5, 0.5, -0.5), Point(0.5, 0.5, -0.5), Point(0.5, 0.5, 0.5)),
+            Triangle(Point(-0.5, 0.5, -0.5), Point(0.5, 0.5, 0.5), Point(-0.5, 0.5, 0.5)),
+
+            // Left face
+            Triangle(Point(-0.5, -0.5, -0.5), Point(-0.5, 0.5, -0.5), Point(-0.5, 0.5, 0.5)),
+            Triangle(Point(-0.5, -0.5, -0.5), Point(-0.5, 0.5, 0.5), Point(-0.5, -0.5, 0.5)),
+
+            // Right face
+            Triangle(Point(0.5, -0.5, -0.5), Point(0.5, 0.5, -0.5), Point(0.5, 0.5, 0.5)),
+            Triangle(Point(0.5, -0.5, -0.5), Point(0.5, 0.5, 0.5), Point(0.5, -0.5, 0.5))
+    };
+    return Polyhedron(faces);
+}
+
+Polyhedron createCube2() {
+    std::vector<Triangle> faces = {
+            // Front face
+            Triangle(Point(0.0, -0.5, -0.5), Point(1.0, -0.5, -0.5), Point(1.0, 0.5, -0.5)),
+            Triangle(Point(0.0, -0.5, -0.5), Point(1.0, 0.5, -0.5), Point(0.0, 0.5, -0.5)),
+
+            // Back face
+            Triangle(Point(0.0, -0.5, 0.5), Point(1.0, -0.5, 0.5), Point(1.0, 0.5, 0.5)),
+            Triangle(Point(0.0, -0.5, 0.5), Point(1.0, 0.5, 0.5), Point(0.0, 0.5, 0.5)),
+
+            // Bottom face
+            Triangle(Point(0.0, -0.5, -0.5), Point(1.0, -0.5, -0.5), Point(1.0, -0.5, 0.5)),
+            Triangle(Point(0.0, -0.5, -0.5), Point(1.0, -0.5, 0.5), Point(0.0, -0.5, 0.5)),
+
+            // Top face
+            Triangle(Point(0.0, 0.5, -0.5), Point(1.0, 0.5, -0.5), Point(1.0, 0.5, 0.5)),
+            Triangle(Point(0.0, 0.5, -0.5), Point(1.0, 0.5, 0.5), Point(0.0, 0.5, 0.5)),
+
+            // Left face
+            Triangle(Point(0.0, -0.5, -0.5), Point(0.0, 0.5, -0.5), Point(0.0, 0.5, 0.5)),
+            Triangle(Point(0.0, -0.5, -0.5), Point(0.0, 0.5, 0.5), Point(0.0, -0.5, 0.5)),
+
+            // Right face
+            Triangle(Point(1.0, -0.5, -0.5), Point(1.0, 0.5, -0.5), Point(1.0, 0.5, 0.5)),
+            Triangle(Point(1.0, -0.5, -0.5), Point(1.0, 0.5, 0.5), Point(1.0, -0.5, 0.5))
+    };
+    return Polyhedron(faces);
+}
+
+
+
+int main() {
+    Polyhedron cube1 = createCube1();
+    Polyhedron cube2 = createCube2();
+
+    std::vector<Triangle> lol;
+
+    for(auto face : cube2.faces){
+        Point p1 = Point(face[0].x,face[0].y*0.5,face[0].z*0.5);
+        Point p2 = Point(face[1].x,face[1].y*0.5,face[1].z*0.5);
+        Point p3 = Point(face[2].x,face[2].y*0.5,face[2].z*0.5);
+        lol.emplace_back(p1,p2,p3);
+    }
+    Point p(1,-0.5,-0.3);
+    auto cube3 = Polyhedron(lol);
+
+    auto a = algorithms::computeUnion(cube3,cube1);
+
+    std::cout << a << std::endl;
+
+    return 0;
+}
+
+
 
 
 #endif

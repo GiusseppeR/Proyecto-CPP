@@ -2,16 +2,13 @@
 #include <algorithm>
 #include <random>
 #include <cmath>
+#include <utility>
 
 Polyhedron::Polyhedron(std::vector<Triangle> initFaces) {
-    faces = initFaces;
-    _numberOfFaces = faces.size();
+    faces = std::move(initFaces);
     _volume = -1;
 }
 
-int Polyhedron::numberOfFaces() {
-    return _numberOfFaces;
-}
 
 Triangle &Polyhedron::operator[](int i) {
     return faces[i];
@@ -19,11 +16,17 @@ Triangle &Polyhedron::operator[](int i) {
 
 std::string Polyhedron::toString() {
     std::string result;
-    for (int i = 0; i < _numberOfFaces; i++){
+    for (int i = 0; i < faces.size(); i++){
         result += faces[i].toString() + ";";
     }
     result.pop_back();
     return result;
+}
+
+bool Polyhedron::isPointOnSurface(Point x) {
+    for(auto triangle : faces)
+        if (triangle.isPointInTriangle(x)) return true;
+    return false;
 }
 
 bool Polyhedron::isPointInside(Point x) {
@@ -47,7 +50,7 @@ bool Polyhedron::rayIntersectsTriangle(Point orig, Point dir, Triangle triangle)
     Point p2 = triangle[2];
 
 
-    const double EPSILON = 1e-9;
+    const double EPSILON = 1e-5;
     Point edge1, edge2, h, s, q;
     double a, f, u, v;
     edge1.x = p1.x - p0.x;
@@ -91,7 +94,6 @@ bool Polyhedron::rayIntersectsTriangle(Point orig, Point dir, Triangle triangle)
 
     return true;
 }
-
 
 double Polyhedron::volume() {
     if (_volume != -1)

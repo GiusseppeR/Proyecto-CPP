@@ -8,18 +8,14 @@
 
 class Polyhedron {
 private:
-    std::vector<Triangle> faces;
-    int _numberOfFaces;
     double _volume;
-
-    // Check if a ray intersects a triangle using the Möller-Trumbore intersection algorithm
 
 public:
     Polyhedron(std::vector<Triangle> initFaces);
+    std::vector<Triangle> faces;
 
-    int numberOfVertices();
-    int numberOfFaces();
     bool isPointInside(Point x);
+    bool isPointOnSurface(Point x);
     bool rayIntersectsTriangle(Point orig, Point dir, Triangle triangle);
     double volume();
 
@@ -28,7 +24,7 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, const Polyhedron& p){
         for (auto triangle : p.faces){
-            os << triangle << std::endl;
+            os << triangle << "," << std::endl;
         }
         return os;
     }
