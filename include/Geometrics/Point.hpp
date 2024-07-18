@@ -16,6 +16,7 @@ public:
     double operator*(Point other);
     Point operator+(Point other);
     Point operator-(Point other);
+    Point operator*(double scalar);
     Point cross(Point other);
     bool operator==(const Point& other) const;
     std::string toString();

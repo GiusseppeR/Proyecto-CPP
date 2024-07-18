@@ -21,6 +21,10 @@ Point Point::operator-(Point other) {
     return Point(x - other.x, y - other.y, z - other.z);
 }
 
+Point Point::operator*(double scalar) {
+    return Point(scalar * x, scalar * y, scalar * z);
+}
+
 Point Point::cross(Point other) {
     double x = y*other.z - z*other.y;
     double y = z*other.x - x*other.z;
