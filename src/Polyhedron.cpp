@@ -35,7 +35,7 @@ bool Polyhedron::isPointInside(Point x) {
 
     for (const auto& triangle : faces) {
 
-        if (rayIntersectsTriangle(x, direction, triangle)) {
+        if (rayIntersectsTriangle(x, direction, triangle).first) {
             intersections++;
         }
     }
@@ -44,7 +44,7 @@ bool Polyhedron::isPointInside(Point x) {
     return intersections % 2 == 1;
 }
 
-bool Polyhedron::rayIntersectsTriangle(Point orig, Point dir, Triangle triangle) {
+std::pair<bool, Point> Polyhedron::rayIntersectsTriangle(Point orig, Point dir, Triangle triangle) {
     Point p0 = triangle[0];
     Point p1 = triangle[1];
     Point p2 = triangle[2];
@@ -64,7 +64,7 @@ bool Polyhedron::rayIntersectsTriangle(Point orig, Point dir, Triangle triangle)
     h.z = dir.x * edge2.y - dir.y * edge2.x;
     a = edge1.x * h.x + edge1.y * h.y + edge1.z * h.z;
     if (a > -EPSILON && a < EPSILON) {
-        return false;    // This ray is parallel to this triangle.
+        return std::pair<bool, Point> {false, {}};    // This ray is parallel to this triangle.
     }
     f = 1.0 / a;
     s.x = orig.x - p0.x;
@@ -72,27 +72,25 @@ bool Polyhedron::rayIntersectsTriangle(Point orig, Point dir, Triangle triangle)
     s.z = orig.z - p0.z;
     u = f * (s.x * h.x + s.y * h.y + s.z * h.z);
     if (u < 0.0 || u > 1.0) {
-        return false;
+        return std::pair<bool, Point> {false, {}};
     }
     q.x = s.y * edge1.z - s.z * edge1.y;
     q.y = s.z * edge1.x - s.x * edge1.z;
     q.z = s.x * edge1.y - s.y * edge1.x;
     v = f * (dir.x * q.x + dir.y * q.y + dir.z * q.z);
     if (v < 0.0 || u + v > 1.0) {
-        return false;
+        return std::pair<bool, Point> {false, {}};
     }
     // At this stage we can compute t to find out where the intersection point is on the line.
     double t = f * (edge2.x * q.x + edge2.y * q.y + edge2.z * q.z);
     if (t > EPSILON) // ray intersection
     {
-        return true;
+        return std::pair<bool, Point> {true, orig + dir * t};
     }
     else // This means that there is a line intersection but not a ray intersection.
     {
-        return false;
+        return std::pair<bool, Point> {false, {}};
     }
-
-    return true;
 }
 
 double Polyhedron::volume() {
@@ -105,4 +103,22 @@ double Polyhedron::volume() {
     }
     _volume = volume/6;
     return _volume;
+}
+
+std::vector<Point> Polyhedron::intersection(Polyhedron other) {
+    std::vector<Point> intersections;
+    for (auto& tri1: faces) {
+        for (auto& tri2: other.faces) {
+            for (int i = 0; i < 3; i++) {
+                Point ray_origin = tri1[i];
+                Point ray_vector = tri1[(i+1)%3];
+                std::pair<bool, Point> intersects_point = rayIntersectsTriangle(ray_origin, ray_vector, tri2);
+                if (intersects_point.first) {
+                    intersections.push_back(intersects_point.second);
+                }
+            }
+        }
+    }
+
+    return intersections;
 }

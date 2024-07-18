@@ -1,12 +1,13 @@
 #include <iostream>
 #include <Geometrics/algorithms.hpp>
+#include <fstream>
 #include <Geometrics/Polyhedron.hpp>
 #include <Geometrics/Parser.hpp>
 
 
 #if 0
 int main() {
-    TriangleParser parser_tetra("../polyhedron.txt");
+    TriangleParser parser_tetra("../include/Polyhedra/tetrahedron.txt");
 
     Polyhedron tetrahedron(parser_tetra.triangles);
 
@@ -19,7 +20,7 @@ int main() {
         std::cout << "The point is outside the polyhedron.\n";
     }
 
-    TriangleParser parser_hexa("../include/Polyhedra/polyhedron.txt");
+    TriangleParser parser_hexa("../include/Polyhedra/hexahedron.txt");
 
     Polyhedron hexahedron(parser_hexa.triangles);
 
@@ -28,6 +29,21 @@ int main() {
     } else {
         std::cout << "The point is outside the polyhedron.\n";
     }
+
+    std::vector<Point> points_intersection = tetrahedron.intersection(hexahedron);
+
+    std::ofstream input_api;
+    input_api.open("input_api.txt");
+    input_api << "[";
+    int i = 0;
+    while (i < points_intersection.size() - 1) {
+        //if (tetrahedron.isPointInside(points_intersection[i]))
+            input_api << "[" << points_intersection[i].toString() << "],";
+        i++;
+    }
+    input_api << "[" << points_intersection[i].toString() << "]";
+    input_api << "]";
+    input_api.close();
 
     return 0;
 }
@@ -114,8 +130,6 @@ int main() {
 
     return 0;
 }
-
-
 
 
 #endif

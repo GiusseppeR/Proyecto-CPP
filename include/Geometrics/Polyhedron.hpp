@@ -5,19 +5,22 @@
 #include "Point.hpp"
 #include <iostream>
 #include <vector>
+#include <utility>
 
 class Polyhedron {
 private:
     double _volume;
 
 public:
+    Polyhedron() = default;
     Polyhedron(std::vector<Triangle> initFaces);
     std::vector<Triangle> faces;
 
     bool isPointInside(Point x);
     bool isPointOnSurface(Point x);
-    bool rayIntersectsTriangle(Point orig, Point dir, Triangle triangle);
+    std::pair<bool, Point> rayIntersectsTriangle(Point orig, Point dir, Triangle triangle);
     double volume();
+    std::vector<Point> intersection(Polyhedron other);
 
     Triangle& operator[](int i);
     std::string toString();
