@@ -19,6 +19,10 @@ public:
     Point operator*(double scalar);
     Point cross(Point other);
     bool operator==(const Point& other) const;
+
+    // Function to check if the point is between the segment AB
+    bool isOnSegment(Point a, Point b);
+
     std::string toString();
     friend std::ostream& operator<<(std::ostream& os, const Point& p){
         os << "(" << p.x << "," << p.y << "," << p.z << ")";

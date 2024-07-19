@@ -26,10 +26,10 @@ Point Point::operator*(double scalar) {
 }
 
 Point Point::cross(Point other) {
-    double x = y*other.z - z*other.y;
-    double y = z*other.x - x*other.z;
-    double z = x*other.y - y*other.x;
-    return Point(x,y,z);
+    double _x = y*other.z - z*other.y;
+    double _y = z*other.x - x*other.z;
+    double _z = x*other.y - y*other.x;
+    return Point(_x,_y,_z);
 }
 
 bool Point::operator==(const Point &other) const {
@@ -38,6 +38,18 @@ bool Point::operator==(const Point &other) const {
     return std::fabs(x - other.x) <= epsilon &&
     std::fabs(y - other.y) <= epsilon &&
     std::fabs(z - other.z) <= epsilon;
+}
+
+// Function to check if the point is between the segment AB
+bool Point::isOnSegment(Point a, Point b) {
+    Point c = *this;
+    Point d = b - a;
+
+    // Solve for parameter t
+    double t = ((c - a) * d) / (d*d);
+
+    // Check if 0 <= t <= 1
+    return (t >= 0 && t <= 1);
 }
 
 std::string Point::toString() {
