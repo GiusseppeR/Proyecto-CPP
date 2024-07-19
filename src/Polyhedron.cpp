@@ -113,6 +113,7 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
                         //if (point_intersection.distance(tri1[(i+1)%3]) > point_intersection.distance(tri1[i]))
                         //    intersections.push_back(tri1[i]);
                         //else
+                        if (other.isPointInside(tri1[(i+1)%3]))
                             intersections.push_back(tri1[(i+1)%3]);
 
                     }
@@ -122,7 +123,7 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
 
     }
 
-    if (intersections.size())
+    if (intersections.empty())
         return intersections;
 
     for (auto& tri1: other.faces) {
@@ -140,7 +141,8 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
                         //if (point_intersection.distance(tri1[(i+1)%3]) > point_intersection.distance(tri1[i]))
                         //    intersections.push_back(tri1[i]);
                         //else
-                        intersections.push_back(tri1[(i+1)%3]);
+                        if (isPointInside(tri1[(i+1)%3]))
+                            intersections.push_back(tri1[(i+1)%3]);
 
                     }
                 }
