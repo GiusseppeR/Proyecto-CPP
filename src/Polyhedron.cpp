@@ -123,7 +123,7 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
 
     }
 
-    if (intersections.empty())
+    if (!intersections.empty())
         return intersections;
 
     for (auto& tri1: other.faces) {
