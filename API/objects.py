@@ -19,14 +19,41 @@ class Cube(Model):
         )
 
         color = (
-            1, 0, 0,
-            1, 0, 0,
-            1, 0, 0,
-            1, 0, 0,
-            0, 1, 0,
-            0, 1, 0,
-            0, 0, 1,
-            0, 0, 1
+            # Front face
+            1, 0, 0,   # Red
+            1, 0, 0,   # Red
+            1, 0, 0,   # Red
+            1, 0, 0,   # Red
+
+            # Top face
+            0, 1, 0,   # Green
+            0, 1, 0,   # Green
+            0, 1, 0,   # Green
+            0, 1, 0,   # Green
+
+            # Right face
+            0, 0, 1,   # Blue
+            0, 0, 1,   # Blue
+            0, 0, 1,   # Blue
+            0, 0, 1,   # Blue
+
+            # Left face
+            1, 1, 0,   # Yellow
+            1, 1, 0,   # Yellow
+            1, 1, 0,   # Yellow
+            1, 1, 0,   # Yellow
+
+            # Bottom face
+            1, 0, 1,   # Magenta
+            1, 0, 1,   # Magenta
+            1, 0, 1,   # Magenta
+            1, 0, 1,   # Magenta
+
+            # Back face
+            0, 1, 1,   # Cyan
+            0, 1, 1,   # Cyan
+            0, 1, 1,   # Cyan
+            0, 1, 1    # Cyan
         )
 
         indices= (

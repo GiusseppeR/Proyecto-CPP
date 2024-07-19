@@ -8,9 +8,6 @@ class World:
         self.element = []
         self.points = []
         self.spheres = []
-
-        points = np.random.rand(30, 3)
-        self.addModel(Polyhedron(points))
         self.rx,self.ry = 0, 0
         self.zoom = 1
 
@@ -25,6 +22,7 @@ class World:
     def consolidate_points(self):
         if len(self.points) > 3:
             self.element.append(Polyhedron(np.array(self.points)))
+            self.points.clear()
 
     def addModel(self, model):
         self.element.append(model)
