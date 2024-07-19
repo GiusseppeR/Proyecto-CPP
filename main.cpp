@@ -5,32 +5,41 @@
 #include <Geometrics/Parser.hpp>
 
 
-#if 0
+#if 1
 int main() {
     TriangleParser parser_tetra("../include/Polyhedra/tetrahedron.txt");
+    TriangleParser parser_tetra3("../include/Polyhedra/tetrahedron3.txt");
 
     Polyhedron tetrahedron(parser_tetra.triangles);
+    Polyhedron tetrahedron3(parser_tetra3.triangles);
 
     std::cout << tetrahedron.volume() << std::endl;
 
-
-    if (tetrahedron.isPointInside(Point(0.2,0.2,0.2))) {
+    if (tetrahedron.isPointInside(Point(0.0,0.0,0.0))) {
         std::cout << "The point is inside the polyhedron.\n";
     } else {
         std::cout << "The point is outside the polyhedron.\n";
     }
 
-    TriangleParser parser_hexa("../include/Polyhedra/hexahedron.txt");
+    TriangleParser parser_hexa("../include/Polyhedra/hexahedron2.txt");
 
     Polyhedron hexahedron(parser_hexa.triangles);
+    std::cout << hexahedron;
 
-    if (hexahedron.isPointInside(Point(0.5,0.9,0.9))) {
+    if (hexahedron.isPointInside(Point(-1.0,-1.0,-1.0))) {
         std::cout << "The point is inside the polyhedron.\n";
     } else {
         std::cout << "The point is outside the polyhedron.\n";
     }
 
-    std::vector<Point> points_intersection = tetrahedron.intersection(hexahedron);
+    //std::vector<Point> points_intersection = tetrahedron.intersection(hexahedron);
+
+    std::cout << tetrahedron;
+    std::cout << tetrahedron3;
+
+    std::vector<Point> points_intersection = tetrahedron.intersection(tetrahedron3);
+    //std::vector<Point> points_intersection = tetrahedron3.intersection(tetrahedron);
+    //std::vector<Point> points_intersection = tetrahedron.intersection(hexahedron);
 
     std::ofstream input_api;
     input_api.open("input_api.txt");
