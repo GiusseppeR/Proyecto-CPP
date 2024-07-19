@@ -17,6 +17,7 @@ class Model:
         self.indice = vector(GLuint, *indice)
         self.rx, self.ry = 0, 0
         self.zoom = 1
+        self.position = None
 
     def update(self, dt):
         velocity = 100
@@ -26,6 +27,9 @@ class Model:
         glLoadIdentity()
 
         glScalef(self.zoom,self.zoom,1)
+        
+        if self.position is not None:
+            glTranslatef(*self.position)
 
         glRotatef(self.rx, 0, 1, 0)
         glRotatef(self.ry, -1, 0, 0)

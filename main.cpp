@@ -5,7 +5,7 @@
 #include <Geometrics/Parser.hpp>
 
 
-#if 0
+#if 1
 int main() {
     TriangleParser parser_tetra("../include/Polyhedra/tetrahedron.txt");
 
@@ -33,7 +33,7 @@ int main() {
     std::vector<Point> points_intersection = tetrahedron.intersection(hexahedron);
 
     std::ofstream input_api;
-    input_api.open("input_api.txt");
+    input_api.open("../API/input_api.txt");
     input_api << "[";
     int i = 0;
     while (i < points_intersection.size() - 1) {
@@ -106,8 +106,6 @@ Polyhedron createCube2() {
     };
     return Polyhedron(faces);
 }
-
-
 
 int main() {
     Polyhedron cube1 = createCube1();
