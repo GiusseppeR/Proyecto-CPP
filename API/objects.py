@@ -71,14 +71,13 @@ class Polyhedron(Model):
 
 class Sphere(Model):
     def __init__(self, position, radius=0.05, slices=16, stacks=16):
-        self.vertices, self.indices = self.generate_sphere(radius, slices, stacks)
+        self.vertices, self.indices = self.generate_sphere(position, radius, slices, stacks)
         self.colors = [(0, 0, 0) for _ in self.vertices]  # Black color for all vertices
         flat_vertices = [coord for vertex in self.vertices for coord in vertex]
         flat_colors = [color for c in self.colors for color in c]
         super().__init__(tuple(flat_vertices), tuple(flat_colors), tuple(self.indices))
-        self.position = position
 
-    def generate_sphere(self, radius, slices, stacks):
+    def generate_sphere(self, position, radius, slices, stacks):
         vertices = []
         indices = []
 
@@ -86,9 +85,9 @@ class Sphere(Model):
             lat = np.pi / 2 - i * np.pi / stacks  # latitude
             for j in range(slices + 1):
                 lon = 2 * np.pi * j / slices  # longitude
-                x = radius * np.cos(lat) * np.cos(lon)
-                y = radius * np.cos(lat) * np.sin(lon)
-                z = radius * np.sin(lat)
+                x = position[0] + radius * np.cos(lat) * np.cos(lon)
+                y = position[1] + radius * np.cos(lat) * np.sin(lon)
+                z = position[2] + radius * np.sin(lat)
                 vertices.append((x, y, z))
 
         for i in range(stacks):

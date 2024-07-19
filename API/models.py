@@ -23,17 +23,6 @@ class Model:
         velocity = 100
 
     def draw(self):
-        glMatrixMode(GL_MODELVIEW)
-        glLoadIdentity()
-
-        glScalef(self.zoom,self.zoom,1)
-        
-        if self.position is not None:
-            glTranslatef(*self.position)
-
-        glRotatef(self.rx, 0, 1, 0)
-        glRotatef(self.ry, -1, 0, 0)
-
         glEnableClientState(GL_VERTEX_ARRAY)
         glEnableClientState(GL_COLOR_ARRAY)
 

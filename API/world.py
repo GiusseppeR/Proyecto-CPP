@@ -46,18 +46,6 @@ class World:
             obj.on_mouse_scroll(x,y,scroll_x,scroll_y)
     
     def draw_axes(self):
-        # Save the current matrix state
-        glPushMatrix()
-        
-        glMatrixMode(GL_MODELVIEW)
-        glLoadIdentity()
-
-        # Apply transformations
-        glScalef(self.zoom, self.zoom, 1)
-        glRotatef(self.rx, 0, 1, 0)
-        glRotatef(self.ry, -1, 0, 0)
-
-        # Set the color and draw the X, Y, and Z axes
         glBegin(GL_LINES)
 
         # X axis in red
@@ -77,5 +65,3 @@ class World:
 
         glEnd()
         
-        # Restore the previous matrix state
-        glPopMatrix()
