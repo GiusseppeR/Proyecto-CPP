@@ -82,7 +82,7 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
         algorithms::mergeVectors(intersections,result);
     }
 
-    if (intersections.empty())
+    if (!intersections.empty())
         return intersections;
 
     for (int i = 0; i < other.faces.size(); i++) {
