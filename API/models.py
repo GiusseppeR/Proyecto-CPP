@@ -15,12 +15,6 @@ class Model:
         self.vertices = vector(GLfloat, *vertices)
         self.colorMatrix = vector(GLfloat, *colorMatrix)
         self.indice = vector(GLuint, *indice)
-        self.rx, self.ry = 0, 0
-        self.zoom = 1
-        self.position = None
-
-    def update(self, dt):
-        velocity = 100
 
     def draw(self):
         glEnableClientState(GL_VERTEX_ARRAY)
@@ -33,9 +27,6 @@ class Model:
         glDisableClientState(GL_COLOR_ARRAY)
         glDisableClientState(GL_VERTEX_ARRAY)
 
-    def on_mouse_drag(self, x, y, dx, dy, buttons, modifiers):
-        self.rx += dx * 0.5
-        self.ry += dy * 0.5
-    
-    def on_mouse_scroll(self, x, y, scroll_x, scroll_y):
-        self.zoom += scroll_y * 0.5
+    def move(self,vector):
+        for i in range(len(self.vertices)):
+            self.vertices[i] += vector[i % 3]

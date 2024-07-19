@@ -14,10 +14,28 @@ class Window(pyglet.window.Window):
         self.input_text = ""
         self.input_active = False
         self.label = pyglet.text.Label('', font_name='Arial', font_size=24, x=10, y=30, anchor_x='left', anchor_y='center', color=(0, 0, 0, 255))
+        self.logs = [pyglet.text.Label('Polyhedra:', font_name='Arial', font_size=10, x=10, y=self.height-30, anchor_x='left', anchor_y='center', color=(0, 0, 0, 255))]
+        self.point_label = pyglet.text.Label('Points:', font_name='Arial', font_size=10, x=self.width-150, y=self.height-30, anchor_x='left', anchor_y='center', color=(0, 0, 0, 255))
+        self.points_log = [self.point_label]
 
         self.world = World()
         self.rx,self.ry = 0,0
         self.zoom = 1
+
+    def add_polyhedron_label(self):
+        index = len(self.world.element) - 1
+        height = self.logs[-1].y - 20
+        log = pyglet.text.Label(f"Polyhedron {index}", font_name='Arial', font_size=10, x=10, y=height, anchor_x='left', anchor_y='center', color=(0, 0, 0, 255))
+        self.logs.append(log)
+
+    def update_point_label(self):
+        self.points_log.clear()
+        self.points_log.append(self.point_label)
+
+        for point in self.world.points:
+            height = self.points_log[-1].y - 20
+            log = pyglet.text.Label(f"Point ({point[0]}, {point[1]}, {point[2]})", font_name='Arial', font_size=10, x=self.width-150, y=height, anchor_x='left', anchor_y='center', color=(0, 0, 0, 255))
+            self.points_log.append(log)
 
     def on_resize(self, width, height):
         glViewport(0, 0, width, height)
@@ -31,20 +49,23 @@ class Window(pyglet.window.Window):
         glClearColor(1, 1, 1, 0.8)
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
-        # Set up the projection and modelview matrices
         glMatrixMode(GL_PROJECTION)
         glLoadIdentity()
-        gluOrtho2D(0, self.width, 0, self.height)  # For 2D drawing
+        gluOrtho2D(0, self.width, 0, self.height)  
         glMatrixMode(GL_MODELVIEW)
         glLoadIdentity()
 
         self.label.text = self.input_text
         self.label.draw()
 
-        # Draw 3D world and other elements
+        for log in self.logs:
+            log.draw()
+        for log in self.points_log:
+            log.draw()
+
         glMatrixMode(GL_PROJECTION)
         glLoadIdentity()
-        gluPerspective(60, self.width / self.height, 0.1, 500)  # Perspective projection
+        gluPerspective(60, self.width / self.height, 0.1, 500)  
         glMatrixMode(GL_MODELVIEW)
         glLoadIdentity()
         gluLookAt(5, 5, 5,  # Camera position
@@ -61,6 +82,7 @@ class Window(pyglet.window.Window):
         add_point = r'^pt (-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+)$'
         cube = "cube"
         random_poly = "rd poly"
+        move = r'^move (\d+) (-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+)$'
 
         if re.match(add_point,string):
             x_str, y_str, z_str = re.match(add_point,string).groups()
@@ -70,14 +92,33 @@ class Window(pyglet.window.Window):
             z = float(z_str)
 
             self.world.add_point((x,y,z))
-            print(x,y,z)
+            self.update_point_label()
+            return
         
         if string == cube:
             self.world.addModel(obj.Cube())
+            self.add_polyhedron_label()
+            self.update_point_label()
+            return
 
         if string == random_poly:
             points = np.random.uniform(-1, 1,(30,3))
             self.world.addModel(obj.Polyhedron(points))
+            self.add_polyhedron_label()
+            self.update_point_label()
+            return
+        
+        if re.match(move,string):
+            i_str, x_str, y_str, z_str = re.match(move,string).groups()
+
+            i = int(i_str)
+
+            x = float(x_str)
+            y = float(y_str)
+            z = float(z_str)
+
+            self.world.move_element(i,(x,y,z))
+            return
 
     def on_mouse_drag(self, x, y, dx, dy, buttons, modifiers):
         self.rx += dx * 0.5
@@ -87,8 +128,9 @@ class Window(pyglet.window.Window):
         self.zoom += scroll_y * 0.1
 
     def on_text(self,text):
-        if self.input_active:
+        if self.input_active and text != '  ':
             self.input_text += text
+            print(text)
 
     def on_key_press(self,symbol, modifiers):
         if symbol == pyglet.window.key.TAB:
@@ -97,6 +139,11 @@ class Window(pyglet.window.Window):
             self.input_text = self.input_text[:-1]
         if symbol == pyglet.window.key.ENTER and self.input_active:
             self.execute_command(self.input_text)
-            self.input_text = ""
         if symbol == pyglet.window.key.SPACE and not self.input_active:
             self.world.consolidate_points()
+            self.add_polyhedron_label()
+            self.update_point_label()
+    
+    def on_key_release(self, symbol, modifiers):
+        if symbol == pyglet.window.key.ENTER and self.input_active:
+            self.input_text = ""
