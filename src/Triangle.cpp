@@ -1,6 +1,7 @@
 #include <Geometrics/Triangle.hpp>
 #include <Geometrics/algorithms.hpp>
 #include <cmath>
+#include <algorithm>
 
 Triangle::Triangle(Point A, Point B, Point C): points({A,B,C}) {
     Point normal = (B-A).cross(C-A);
@@ -11,6 +12,33 @@ Triangle::Triangle(Point A, Point B, Point C): points({A,B,C}) {
 Point &Triangle::operator[](int i) {
     return points[i];
 }
+
+
+bool Triangle::operator==(const Triangle &other) const {
+    auto v1 = points;
+    auto v2 = other.points;
+
+    std::sort(v1.begin(), v1.end(), [](const Point& a, const Point& b) {
+        const double EPSILON = 1e-5;
+        if (fabs(a.x - b.x) > EPSILON) return a.x < b.x;
+        if (fabs(a.y - b.y) > EPSILON) return a.y < b.y;
+        return a.z < b.z;
+    });
+
+    std::sort(v2.begin(), v2.end(), [](const Point& a, const Point& b) {
+        const double EPSILON = 1e-5;
+        if (fabs(a.x - b.x) > EPSILON) return a.x < b.x;
+        if (fabs(a.y - b.y) > EPSILON) return a.y < b.y;
+        return a.z < b.z;
+    });
+
+    for (int i = 0; i < 3; i++){
+        if (!(v1[i] == v2[i]))
+            return false;
+    }
+    return true;
+}
+
 
 std::string Triangle::toString() {
     std::string result;

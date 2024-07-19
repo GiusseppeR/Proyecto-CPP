@@ -10,7 +10,7 @@
 class Polyhedron {
 private:
     double _volume;
-    std::vector<Point> faceIntersection(int index, Polyhedron other);
+    std::vector<Point> faceIntersection(int index, Polyhedron other, bool lookInside);
 public:
     Polyhedron() = default;
     Polyhedron(std::vector<Triangle> initFaces);
@@ -18,8 +18,10 @@ public:
 
     bool isPointInside(Point x);
     bool isPointOnSurface(Point x);
+    bool rayIntersectsPolyhedron(Point A, Point B);
     double volume();
     std::vector<Point> intersection(Polyhedron other);
+    Polyhedron unionPolyhedron(Polyhedron other);
 
     Triangle& operator[](int i);
     std::string toString();

@@ -25,6 +25,15 @@ std::string Polyhedron::toString() {
     return result;
 }
 
+bool Polyhedron::rayIntersectsPolyhedron(Point A, Point B) {
+    for(auto face : faces){
+        auto result = algorithms::rayIntersectsTriangle(A, B,face);
+        if(result.first)
+            return true;
+    }
+    return false;
+}
+
 
 bool Polyhedron::isPointOnSurface(Point x) {
     for(auto triangle : faces)
@@ -45,6 +54,7 @@ bool Polyhedron::isPointInside(Point x) {
     return intersections % 2 == 1;
 }
 
+
 double Polyhedron::volume() {
     if (_volume != -1)
         return _volume;
@@ -59,13 +69,17 @@ double Polyhedron::volume() {
     return _volume;
 }
 
-std::vector<Point> Polyhedron::faceIntersection(int index, Polyhedron other) {
+
+std::vector<Point> Polyhedron::faceIntersection(int index, Polyhedron other, bool lookInside) {
     std::vector<Point> intersections;
     Triangle face = this->faces[index];
 
     for(auto& tri2 : other.faces){
         auto result = face.triangleIntersection(tri2);
         algorithms::mergeVectors(intersections,result);
+
+        if(!lookInside)
+            continue;
 
         for (auto p : face.points) {
             if (other.isPointInside(p))
@@ -75,10 +89,11 @@ std::vector<Point> Polyhedron::faceIntersection(int index, Polyhedron other) {
     return intersections;
 }
 
+
 std::vector<Point> Polyhedron::intersection(Polyhedron other) {
     std::vector<Point> intersections;
     for (int i = 0; i < faces.size(); i++) {
-        auto result = faceIntersection(i, other);
+        auto result = faceIntersection(i, other, false);
         algorithms::mergeVectors(intersections,result);
     }
 
@@ -86,8 +101,45 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
         return intersections;
 
     for (int i = 0; i < other.faces.size(); i++) {
-        auto result = other.faceIntersection(i,*this);
+        auto result = other.faceIntersection(i,*this, false);
         algorithms::mergeVectors(intersections,result);
     }
     return intersections;
+}
+
+Polyhedron Polyhedron::unionPolyhedron(Polyhedron other) {
+    std::vector<Triangle> unionFaces;
+
+    for(int i = 0; i < faces.size(); i++){
+        Triangle face = this->faces[i];
+        if (other.isPointInside(face[0]) &&
+        other.isPointInside(face[1]) &&
+        other.isPointInside(face[2]))
+            continue;
+
+        auto intersection = faceIntersection(i, other,false);
+        auto complement = algorithms::triPolyIntersectionComplement(intersection,face,other);
+        if (complement.empty()){
+            unionFaces.push_back(face);
+            continue;
+        }
+        algorithms::mergeVectors(unionFaces,complement);
+    }
+
+    for(int i = 0; i < other.faces.size(); i++){
+        Triangle face = other.faces[i];
+        if (isPointInside(face[0]) &&
+            isPointInside(face[1]) &&
+            isPointInside(face[2]))
+            continue;
+
+        auto intersection = other.faceIntersection(i, *this,false);
+        auto complement = algorithms::triPolyIntersectionComplement(intersection,face,*this);
+        if (complement.empty()){
+            unionFaces.push_back(face);
+            continue;
+        }
+        algorithms::mergeVectors(unionFaces,complement);
+    }
+    return Polyhedron(unionFaces);
 }

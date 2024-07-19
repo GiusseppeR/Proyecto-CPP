@@ -23,6 +23,7 @@ public:
     std::string toString();
     bool isPointInTriangle(Point x);
     std::vector<Point> triangleIntersection(Triangle other);
+    bool operator==(const Triangle& other) const;
 
 
     friend std::ostream& operator<<(std::ostream& os, const Triangle& p){

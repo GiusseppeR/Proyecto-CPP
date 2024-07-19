@@ -1,4 +1,6 @@
 #include <Geometrics/algorithms.hpp>
+#include <algorithm>
+#include <cmath>
 
 std::pair<bool, Point> algorithms::rayIntersectsTriangle(Point orig, Point dir, Triangle triangle) {
     Point p0 = triangle[0];
@@ -36,4 +38,65 @@ std::pair<bool, Point> algorithms::rayIntersectsTriangle(Point orig, Point dir, 
     {
         return std::pair<bool, Point> {false, {}};
     }
+}
+
+std::vector<Triangle> algorithms::triPolyIntersectionComplement(std::vector<Point> intersection_p,
+                                                                Triangle triangle, Polyhedron P) {
+    if (intersection_p.empty()){
+        return {};
+    }
+
+    std::vector<Point> intersection;
+    for(auto p : intersection_p){
+        if(!elementInVector(p,intersection))
+            intersection.push_back(p);
+    }
+
+    //First: establish the intersection lines
+    std::vector<std::pair<Point,Point>> lines;
+
+    for(int i = 0; i < intersection.size()-1; i++){
+        Point origin = intersection[i];
+
+        for(int j = i + 1; j < intersection.size(); j++){
+            Point destiny = intersection[j];
+
+            Point middle = (destiny + origin) * 0.5;
+
+            if(P.isPointInside(middle))
+                continue;
+
+            lines.emplace_back(origin,destiny);
+            break;
+        }
+    }
+
+    //Second: for each line, find  the appropriate points in the triangle
+    std::vector<Triangle> triangles;
+    for (auto line : lines){
+        Point first = line.first;
+        Point second = line.second;
+        Point tri_first;
+
+        for(auto p : triangle.points){
+            if(P.rayIntersectsPolyhedron(first, p))
+                continue;
+
+            triangles.emplace_back(first,second,p);
+            tri_first = p;
+            break;
+        }
+
+        for(auto p : triangle.points){
+            if (p == tri_first)
+                continue;
+
+            if(P.rayIntersectsPolyhedron(second, p))
+                continue;
+
+            triangles.emplace_back(second, tri_first, p);
+            break;
+        }
+    }
+    return triangles;
 }

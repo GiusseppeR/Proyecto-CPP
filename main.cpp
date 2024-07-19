@@ -5,7 +5,7 @@
 #include <Geometrics/Parser.hpp>
 
 
-#if 1
+#if 0
 int main() {
     TriangleParser parser_tetra("../include/Polyhedra/tetrahedron.txt");
     TriangleParser parser_tetra3("../include/Polyhedra/tetrahedron3.txt");
@@ -129,15 +129,12 @@ int main() {
     Point p(1,-0.5,-0.3);
     auto cube3 = Polyhedron(lol);
 
-    std::vector<int> v1 ={1,2,3};
-    std::vector<int> v2 ={4,5,6};
 
-    algorithms::mergeVectors(v1,v2);
 
-    for(auto l : v1){
-        std::cout << l << ",";
-    }
-    std::cout << std::endl;
+    //for (auto p : cube1.intersection(cube3))
+    //    std::cout << p << ",";
+    std::cout << cube1.unionPolyhedron(cube3) << std::endl;
+
 
     return 0;
 }
