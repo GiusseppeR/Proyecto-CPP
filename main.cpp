@@ -46,13 +46,9 @@ int main() {
     std::ofstream input_api;
     input_api.open("../API/input_api.txt");
     input_api << "[";
-    int i = 0;
-    while (i < points_intersection.size() - 1) {
-        //if (tetrahedron.isPointInside(points_intersection[i]))
-            input_api << "[" << points_intersection[i].toString() << "],";
-        i++;
+    for(int i = 0; i < points_intersection.size(); i++) {
+        input_api << "[" << points_intersection[i].toString() << "]";
     }
-    input_api << "[" << points_intersection[i].toString() << "]";
     input_api << "]";
     input_api.close();
 
@@ -133,9 +129,15 @@ int main() {
     Point p(1,-0.5,-0.3);
     auto cube3 = Polyhedron(lol);
 
-    auto a = algorithms::computeUnion(cube3,cube1);
+    std::vector<int> v1 ={1,2,3};
+    std::vector<int> v2 ={4,5,6};
 
-    std::cout << a << std::endl;
+    algorithms::mergeVectors(v1,v2);
+
+    for(auto l : v1){
+        std::cout << l << ",";
+    }
+    std::cout << std::endl;
 
     return 0;
 }

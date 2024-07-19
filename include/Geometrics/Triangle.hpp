@@ -21,12 +21,9 @@ public:
     Point normal();
     Point& operator[](int i);
     std::string toString();
-    void setVertex(Point v, int index);
     bool isPointInTriangle(Point x);
-    bool checkLineIntersection(Point a, Point b);
-    Point lineIntersection(Point a, Point b);
-    std::vector<Point> triangleIntersection(Triangle t);
-    std::vector<std::vector<Point>> polyhedronIntersection(std::vector<Triangle> polyhedronFaces);
+    std::vector<Point> triangleIntersection(Triangle other);
+
 
     friend std::ostream& operator<<(std::ostream& os, const Triangle& p){
         os << "[";

@@ -5,8 +5,13 @@
 #include "Polyhedron.hpp"
 
 namespace algorithms{
-    Polyhedron computeUnion( Polyhedron P1,  Polyhedron P2);
-    Point generateRandomPointOnLine(Point A, Point B);
+    std::pair<bool, Point> rayIntersectsTriangle(Point orig, Point dir, Triangle triangle);
+    template<typename T>
+    void mergeVectors(std::vector<T>& first, std::vector<T> second){
+        first.insert(first.end(),
+                             second.begin(),
+                             second.end());
+    }
 }
 
 #endif
