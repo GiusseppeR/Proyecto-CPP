@@ -5,6 +5,8 @@ from world import World
 import numpy as np
 import objects as obj
 import re
+import ast
+import os
 
 class Window(pyglet.window.Window):
     def __init__(self, *args, **kwargs):
@@ -84,6 +86,8 @@ class Window(pyglet.window.Window):
         random_poly = "rd poly"
         move = r'^move (\d+) (-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+)$'
         non_convex_test = "nonconvex poly"
+        intersection = "intersect"
+        
 
         if re.match(add_point,string):
             x_str, y_str, z_str = re.match(add_point,string).groups()
@@ -126,6 +130,19 @@ class Window(pyglet.window.Window):
             self.add_polyhedron_label()
             self.update_point_label()
             return
+        
+        if string == intersection:
+            file_element = self.world.element_name
+            os.system(f"./../build/Proyecto {file_element[:-1]} {file_element[:-2]}")
+
+            with open('intersect_api.txt', 'r') as file:
+                data = file.read()
+            
+            array = ast.literal_eval(data)
+            points = np.array(array)
+            points = np.unique(points, axis=0)
+            print(points)
+            self.world.addModel(obj.ConvexPolyhedron(points))
 
     def on_mouse_drag(self, x, y, dx, dy, buttons, modifiers):
         self.rx += dx * 0.5

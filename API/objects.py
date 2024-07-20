@@ -68,7 +68,7 @@ class Cube(Model):
         super().__init__(cube, color, indices)
 
 class ConvexPolyhedron(Model):
-    def __init__(self, points):
+    def __init__(self, points, file_name = ''):
         hull = ConvexHull(points)
 
         vertices = []
@@ -81,6 +81,13 @@ class ConvexPolyhedron(Model):
             (1, 0, 1),  # Magenta
             (0, 1, 1),  # Cyan
         ]
+
+        if len(file_name) > 0:
+            file = open(f"{file_name}", "w")
+
+            for s in hull.simplices:
+                file.write(f"{points[s[0]]},{points[s[1]]},{points[s[2]]}\n")  
+            file.close()
 
         for face_index, simplex in enumerate(hull.simplices):
             color = face_colors[face_index % len(face_colors)] 

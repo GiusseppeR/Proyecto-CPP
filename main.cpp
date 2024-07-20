@@ -1,6 +1,8 @@
 #include <iostream>
 #include <Geometrics/algorithms.hpp>
 #include <fstream>
+#include <string.h>
+#include <format>
 #include <Geometrics/Polyhedron.hpp>
 #include <Geometrics/Parser.hpp>
 
@@ -56,6 +58,7 @@ int main() {
 }
 
 #else
+#if 0
 Polyhedron createCube1() {
     std::vector<Triangle> faces = {
             // Front face
@@ -138,6 +141,57 @@ int main() {
 
     return 0;
 }
+#else
+
+#endif
+
+int main(int argc, char *argv[]) {
+
+    if (argc == 3) {
+    }
+
+    if (argc == 4) {
+        if (strcmp(argv[1], "intersect") == 0) {
+            std::cout << argv[2];
+            char orig1[50] = "../";
+            strcat(orig1, argv[2]);
+            TriangleParser parser1(orig1);
+
+            char orig2[50] = "../";
+            strcat(orig2, argv[3]);
+            TriangleParser parser2(orig2);
+
+            Polyhedron poly1(parser1.triangles);
+            Polyhedron poly2(parser2.triangles);
+
+            std::vector<Point> points_intersection = poly1.intersection(poly2);
+
+            std::ofstream input_api;
+            input_api.open("../API/intersect_api.txt");
+            input_api << "[";
+            int i = 0;
+            while (i < points_intersection.size() - 1) {
+                //if (tetrahedron.isPointInside(points_intersection[i]))
+                input_api << "[" << points_intersection[i].toString() << "],";
+                i++;
+            }
+            input_api << "[" << points_intersection[i].toString() << "]";
+            input_api << "]";
+            input_api.close();
+
+        } else if (strcmp(argv[1], "union") == 0) {
+
+        } else {
+            std::cout << argc;
+
+        }
+    }
+
+
+
+    return 0;
+}
+
 
 
 #endif

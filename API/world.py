@@ -6,6 +6,7 @@ import numpy as np
 class World:
     def __init__(self):
         self.element = []
+        self.element_name = []
         self.points = []
         self.spheres = []
         self.axes = Axes()
@@ -19,7 +20,11 @@ class World:
 
     def consolidate_points(self):
         if len(self.points) > 3:
-            self.element.append(ConvexPolyhedron(np.array(self.points)))
+            file_name = f"polyhedron_{len(self.element)}.txt"
+            convexpoly = ConvexPolyhedron(np.array(self.points), file_name)
+            
+            self.element.append(convexpoly)
+            self.element_name.append(file_name)
             self.points.clear()
             self.spheres.clear()
 
