@@ -15,8 +15,8 @@ Point &Triangle::operator[](int i) {
 
 
 bool Triangle::operator==(const Triangle &other) const {
-    auto v1 = points;
-    auto v2 = other.points;
+    std::vector<Point> v1 = {points[0],points[1],points[2]};
+    std::vector<Point> v2 = {other.points[0],other.points[1],other.points[2]};
 
     std::sort(v1.begin(), v1.end(), [](const Point& a, const Point& b) {
         const double EPSILON = 1e-5;
@@ -56,18 +56,21 @@ Point Triangle::normal() {
 }
 
 bool Triangle::isPointInTriangle(Point x) {
-    if(x == points[0] ||
-    x == points[1] ||
-    x == points[2])
-        return true;
+    Point v0 = points[2] - points[0];
+    Point v1 = points[1] - points[0];
+    Point v2 = x - points[0];
 
-    double planeEquation = x*plane.first + plane.second;
-    const double EPSILON = 1e-5;
+    double dot00 = v0 * v0;
+    double dot01 = v0 * v1;
+    double dot02 = v0 * v2;
+    double dot11 = v1 * v1;
+    double dot12 = v2 * v2;
 
-    if (planeEquation < EPSILON)
-        return true;
+    double invDenom = 1/(dot00*dot11 - dot01 *dot01);
+    double u = (dot11 * dot02 - dot01 * dot12) * invDenom;
+    double v = (dot00 * dot12 - dot01 * dot02) * invDenom;
 
-    return false;
+    return (u >= 0) && (v >= 0) && (u + v <= 1);
 }
 
 std::vector<Point> Triangle::triangleIntersection(Triangle other) {

@@ -93,7 +93,7 @@ std::vector<Point> Polyhedron::faceIntersection(int index, Polyhedron other, boo
 std::vector<Point> Polyhedron::intersection(Polyhedron other) {
     std::vector<Point> intersections;
     for (int i = 0; i < faces.size(); i++) {
-        auto result = faceIntersection(i, other, false);
+        auto result = faceIntersection(i, other, true);
         algorithms::mergeVectors(intersections,result);
     }
 
@@ -101,7 +101,7 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
         return intersections;
 
     for (int i = 0; i < other.faces.size(); i++) {
-        auto result = other.faceIntersection(i,*this, false);
+        auto result = other.faceIntersection(i,*this, true);
         algorithms::mergeVectors(intersections,result);
     }
     return intersections;
@@ -109,7 +109,7 @@ std::vector<Point> Polyhedron::intersection(Polyhedron other) {
 
 Polyhedron Polyhedron::unionPolyhedron(Polyhedron other) {
     std::vector<Triangle> unionFaces;
-
+    std::cout << "first:\n";
     for(int i = 0; i < faces.size(); i++){
         Triangle face = this->faces[i];
         if (other.isPointInside(face[0]) &&
@@ -117,15 +117,14 @@ Polyhedron Polyhedron::unionPolyhedron(Polyhedron other) {
         other.isPointInside(face[2]))
             continue;
 
-        auto intersection = faceIntersection(i, other,false);
-        auto complement = algorithms::triPolyIntersectionComplement(intersection,face,other);
+        auto complement = algorithms::triPolyIntersectionComplement(face,other);
         if (complement.empty()){
             unionFaces.push_back(face);
             continue;
         }
         algorithms::mergeVectors(unionFaces,complement);
     }
-
+    std::cout << "second:\n";
     for(int i = 0; i < other.faces.size(); i++){
         Triangle face = other.faces[i];
         if (isPointInside(face[0]) &&
@@ -133,8 +132,7 @@ Polyhedron Polyhedron::unionPolyhedron(Polyhedron other) {
             isPointInside(face[2]))
             continue;
 
-        auto intersection = other.faceIntersection(i, *this,false);
-        auto complement = algorithms::triPolyIntersectionComplement(intersection,face,*this);
+        auto complement = algorithms::triPolyIntersectionComplement(face,*this);
         if (complement.empty()){
             unionFaces.push_back(face);
             continue;

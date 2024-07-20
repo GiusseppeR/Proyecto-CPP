@@ -121,9 +121,9 @@ int main() {
     std::vector<Triangle> lol;
 
     for(auto face : cube2.faces){
-        Point p1 = Point(face[0].x,face[0].y*0.5,face[0].z*0.5);
-        Point p2 = Point(face[1].x,face[1].y*0.5,face[1].z*0.5);
-        Point p3 = Point(face[2].x,face[2].y*0.5,face[2].z*0.5);
+        Point p1 = Point(face[0].x*5-2.5,face[0].y*0.5,face[0].z*0.5);
+        Point p2 = Point(face[1].x*5-2.5,face[1].y*0.5,face[1].z*0.5);
+        Point p3 = Point(face[2].x*5-2.5,face[2].y*0.5,face[2].z*0.5);
         lol.emplace_back(p1,p2,p3);
     }
     Point p(1,-0.5,-0.3);

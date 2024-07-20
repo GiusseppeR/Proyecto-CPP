@@ -40,63 +40,62 @@ std::pair<bool, Point> algorithms::rayIntersectsTriangle(Point orig, Point dir, 
     }
 }
 
-std::vector<Triangle> algorithms::triPolyIntersectionComplement(std::vector<Point> intersection_p,
-                                                                Triangle triangle, Polyhedron P) {
-    if (intersection_p.empty()){
-        return {};
-    }
-
-    std::vector<Point> intersection;
-    for(auto p : intersection_p){
-        if(!elementInVector(p,intersection))
-            intersection.push_back(p);
-    }
-
-    //First: establish the intersection lines
-    std::vector<std::pair<Point,Point>> lines;
-
-    for(int i = 0; i < intersection.size()-1; i++){
-        Point origin = intersection[i];
-
-        for(int j = i + 1; j < intersection.size(); j++){
-            Point destiny = intersection[j];
-
-            Point middle = (destiny + origin) * 0.5;
-
-            if(P.isPointInside(middle))
-                continue;
-
-            lines.emplace_back(origin,destiny);
-            break;
-        }
-    }
-
-    //Second: for each line, find  the appropriate points in the triangle
+std::vector<Triangle> algorithms::triPolyIntersectionComplement(Triangle triangle, Polyhedron P) {
     std::vector<Triangle> triangles;
-    for (auto line : lines){
-        Point first = line.first;
-        Point second = line.second;
-        Point tri_first;
+    for(auto face : P.faces){
+        auto result = triangle.triangleIntersection(face);
 
-        for(auto p : triangle.points){
-            if(P.rayIntersectsPolyhedron(first, p))
+        if (result.size() < 2){
+            result = face.triangleIntersection(triangle);
+        }
+
+        if (result.size() < 2){
+            continue;
+        }
+
+        std::vector<Point> t_points = {triangle.points[0],triangle.points[1],triangle.points[2]} ;
+
+        std::sort(result.begin(), result.end(), [](const Point& a, const Point& b) {
+            const double EPSILON = 1e-5;
+            if (fabs(a.x - b.x) > EPSILON) return a.x < b.x;
+            if (fabs(a.y - b.y) > EPSILON) return a.y < b.y;
+            return a.z < b.z;
+        });
+        std::sort(t_points.begin(), t_points.end(), [](const Point& a, const Point& b) {
+            const double EPSILON = 1e-5;
+            if (fabs(a.x - b.x) > EPSILON) return a.x < b.x;
+            if (fabs(a.y - b.y) > EPSILON) return a.y < b.y;
+            return a.z < b.z;
+        });
+
+        Point first = result[0];
+        Point second = result[1];
+
+        int k = 0;
+
+        for(int i = 0; i < 3; i++){
+            Point p = t_points[i];
+            if(P.rayIntersectsPolyhedron(first, p) || P.rayIntersectsPolyhedron(second,p))
                 continue;
 
             triangles.emplace_back(first,second,p);
-            tri_first = p;
+            k = i;
             break;
         }
 
-        for(auto p : triangle.points){
-            if (p == tri_first)
+        for(int i = k + 1; i < 3; i++){
+            Point p = t_points[i];
+            if(P.rayIntersectsPolyhedron(second, p) || P.rayIntersectsPolyhedron(t_points[k], p))
                 continue;
 
-            if(P.rayIntersectsPolyhedron(second, p))
-                continue;
+            triangles.emplace_back(second, p,t_points[k]);
+            if(P.rayIntersectsPolyhedron(second, t_points[(i+1)%3]) || P.rayIntersectsPolyhedron(p, t_points[(i+1)%3]))
+                break;
 
-            triangles.emplace_back(second, tri_first, p);
+            triangles.emplace_back(p, t_points[(i+1)%3],second);
             break;
         }
     }
+    
     return triangles;
 }

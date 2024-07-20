@@ -6,7 +6,7 @@
 
 namespace algorithms{
     std::pair<bool, Point> rayIntersectsTriangle(Point orig, Point dir, Triangle triangle);
-    std::vector<Triangle> triPolyIntersectionComplement(std::vector<Point> intersection, Triangle triangle, Polyhedron P);
+    std::vector<Triangle> triPolyIntersectionComplement(Triangle triangle, Polyhedron P);
 
     template<typename T>
     bool elementInVector(T element, std::vector<T> vector){
