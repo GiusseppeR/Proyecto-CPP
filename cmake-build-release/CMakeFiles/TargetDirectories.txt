@@ -1,0 +1,6 @@
+C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-release/CMakeFiles/Proyecto.dir
+C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-release/CMakeFiles/rebuild_cache.dir
+C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-release/src/CMakeFiles/meshes.dir
+C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-release/src/CMakeFiles/edit_cache.dir
+C:/Users/rober/CLionProjects/Proyecto-CPP/cmake-build-release/src/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc libmeshes.a CMakeFiles/meshes.dir/Point.cpp.obj CMakeFiles/meshes.dir/Polyhedron.cpp.obj CMakeFiles/meshes.dir/Parser.cpp.obj CMakeFiles/meshes.dir/Triangle.cpp.obj CMakeFiles/meshes.dir/algorithms.cpp.obj
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ranlib.exe libmeshes.a

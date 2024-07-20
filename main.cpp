@@ -147,19 +147,38 @@ int main() {
 
 int main(int argc, char *argv[]) {
 
-    if (argc == 3) {
-    }
+    if (argc == 4) { //bin volume points output
+        if (strcmp(argv[1], "volume") == 0) {
+            TriangleParser parser(argv[2]);
 
-    if (argc == 4) {
+            Polyhedron poly(parser.triangles);
+
+            std::ofstream input_api;
+            input_api.open(argv[3]);
+            input_api << poly.volume();
+            input_api.close();
+        }
+
+    } else if (argc == 7) { // bin is_inside points x y z output
+        if (strcmp(argv[1], "is_inside") == 0) {
+            TriangleParser parser(argv[2]);
+
+            Polyhedron poly(parser.triangles);
+
+            double x = std::stod(argv[3]),
+            y = std::stod(argv[4]),
+            z = std::stod(argv[5]);
+            Point point(x,y,z);
+
+            std::ofstream input_api;
+            input_api.open(argv[6]);
+            input_api << poly.isPointInside(point);
+            input_api.close();
+        }
+    } else if (argc == 5) { // bin (intersect/union) points1 points2 output
         if (strcmp(argv[1], "intersect") == 0) {
-            std::cout << argv[2];
-            char orig1[50] = "../";
-            strcat(orig1, argv[2]);
-            TriangleParser parser1(orig1);
-
-            char orig2[50] = "../";
-            strcat(orig2, argv[3]);
-            TriangleParser parser2(orig2);
+            TriangleParser parser1(argv[2]);
+            TriangleParser parser2(argv[3]);
 
             Polyhedron poly1(parser1.triangles);
             Polyhedron poly2(parser2.triangles);
@@ -167,7 +186,8 @@ int main(int argc, char *argv[]) {
             std::vector<Point> points_intersection = poly1.intersection(poly2);
 
             std::ofstream input_api;
-            input_api.open("../API/intersect_api.txt");
+            std::cout << argv[4];
+            input_api.open(argv[4]);
             input_api << "[";
             int i = 0;
             while (i < points_intersection.size() - 1) {
@@ -180,7 +200,20 @@ int main(int argc, char *argv[]) {
             input_api.close();
 
         } else if (strcmp(argv[1], "union") == 0) {
+            TriangleParser parser1(argv[2]);
+            TriangleParser parser2(argv[3]);
 
+            Polyhedron poly1(parser1.triangles);
+            Polyhedron poly2(parser2.triangles);
+
+            Polyhedron union_polyhedron = poly1.unionPolyhedron(poly2);
+
+            std::ofstream input_api;
+            input_api.open(argv[4]);
+            input_api << "[";
+            input_api << union_polyhedron;
+            input_api << "]";
+            input_api.close();
         } else {
             std::cout << argc;
 

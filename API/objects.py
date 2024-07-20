@@ -3,7 +3,7 @@ import numpy as np
 from pyglet.gl import *
 from models import Model
 from scipy.spatial import ConvexHull
-
+import os
 
 class Cube(Model):
     def __init__(self):
@@ -68,8 +68,10 @@ class Cube(Model):
         super().__init__(cube, color, indices)
 
 class ConvexPolyhedron(Model):
-    def __init__(self, points, file_name = ''):
+    def __init__(self, points):
+        self.points = points
         hull = ConvexHull(points)
+        self.hull = hull
 
         vertices = []
         colors = []
@@ -81,13 +83,6 @@ class ConvexPolyhedron(Model):
             (1, 0, 1),  # Magenta
             (0, 1, 1),  # Cyan
         ]
-
-        if len(file_name) > 0:
-            file = open(f"{file_name}", "w")
-
-            for s in hull.simplices:
-                file.write(f"{points[s[0]]},{points[s[1]]},{points[s[2]]}\n")  
-            file.close()
 
         for face_index, simplex in enumerate(hull.simplices):
             color = face_colors[face_index % len(face_colors)] 
@@ -102,6 +97,15 @@ class ConvexPolyhedron(Model):
         indices = tuple(range(num_vertices))
 
         super().__init__(vertices, colors, indices)
+
+    def add_file(self, file_name):
+        if len(file_name):
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            file = open(f"{dir_path}/{file_name}", "w")
+
+            for s in self.hull.simplices:
+                file.write(f"{self.points[s[0]]},{self.points[s[1]]},{self.points[s[2]]}\n")  
+            file.close()
 
 class Polyhedron(Model):
     vertex_test = [[(-0.5,-0.5,-0.5),(0.5,-0.5,-0.5),(0.5,0.5,-0.5)],

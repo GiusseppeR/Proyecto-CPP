@@ -82,11 +82,13 @@ class Window(pyglet.window.Window):
         
     def execute_command(self,string):
         add_point = r'^pt (-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+)$'
+        is_inside = r'^is\sinside (-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+)$'
         cube = "cube"
         random_poly = "rd poly"
         move = r'^move (\d+) (-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+)$'
         non_convex_test = "nonconvex poly"
         intersection = "intersect"
+        union = "union"
         
 
         if re.match(add_point,string):
@@ -101,7 +103,7 @@ class Window(pyglet.window.Window):
             return
         
         if string == cube:
-            self.world.addModel(obj.Cube())
+            self.world.addModel(obj.Cube(), 0)
             self.add_polyhedron_label()
             self.update_point_label()
             return
@@ -132,17 +134,70 @@ class Window(pyglet.window.Window):
             return
         
         if string == intersection:
-            file_element = self.world.element_name
-            os.system(f"./../build/Proyecto {file_element[:-1]} {file_element[:-2]}")
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            
+            output = f"{dir_path}/intersect_api.txt"
+            file = self.world.files
+            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe intersect {dir_path}/{file[-1]} {dir_path}/{file[-2]} {output}")
+            self.world.element = self.world.element[:-2]
 
-            with open('intersect_api.txt', 'r') as file:
+            with open(output, 'r') as file:
                 data = file.read()
             
             array = ast.literal_eval(data)
             points = np.array(array)
             points = np.unique(points, axis=0)
-            print(points)
-            self.world.addModel(obj.ConvexPolyhedron(points))
+            self.world.addModel(obj.ConvexPolyhedron(points), 0)
+            return
+
+        if string == union:
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            
+            output = f"{dir_path}/union_api.txt"
+            file = self.world.files
+            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe union {dir_path}/{file[-1]} {dir_path}/{file[-2]} {output}")
+            self.world.element = self.world.element[:-2]
+
+            with open(output, 'r') as file:
+                data = file.read()
+            
+            array = ast.literal_eval(data)
+            self.world.addModel(obj.Polyhedron(array), 0)
+            return
+        
+        if string == "clear":
+            self.world.element = []
+            self.world.files = []
+            return
+
+        if string == "volume":
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            output = f"{dir_path}/volume.txt"
+            file = self.world.files[-1]
+            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe volume {dir_path}/{file} {output}")
+            
+            with open(output, 'r') as file:
+                data = file.read()
+            print(data)
+            return
+        
+        if re.match(is_inside,string):
+            x_str, y_str, z_str = re.match(is_inside,string).groups()
+
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            output = f"{dir_path}/inside.txt"
+            file = self.world.files[-1]
+            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe is_inside {dir_path}/{file} {x_str} {y_str} {z_str} {output}")
+
+            with open(output, 'r') as file:
+                data = file.read()
+            if int(data):
+                print("is inside")
+            else:
+                print("is outside")
+            return
+
+
 
     def on_mouse_drag(self, x, y, dx, dy, buttons, modifiers):
         self.rx += dx * 0.5
@@ -166,6 +221,8 @@ class Window(pyglet.window.Window):
             self.world.consolidate_points()
             self.add_polyhedron_label()
             self.update_point_label()
+        if symbol == pyglet.window.key.ESCAPE:
+            self.close()
     
     def on_key_release(self, symbol, modifiers):
         if symbol == pyglet.window.key.ENTER and self.input_active:
