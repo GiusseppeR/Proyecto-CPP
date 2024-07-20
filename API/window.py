@@ -138,7 +138,7 @@ class Window(pyglet.window.Window):
             
             output = f"{dir_path}/intersect_api.txt"
             file = self.world.files
-            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe intersect {dir_path}/{file[-1]} {dir_path}/{file[-2]} {output}")
+            os.system(f"cd {dir_path}/../cmake-build-release && Proyecto.exe intersect {dir_path}/{file[-1]} {dir_path}/{file[-2]} {output}")
             self.world.element = self.world.element[:-2]
 
             with open(output, 'r') as file:
@@ -155,7 +155,7 @@ class Window(pyglet.window.Window):
             
             output = f"{dir_path}/union_api.txt"
             file = self.world.files
-            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe union {dir_path}/{file[-1]} {dir_path}/{file[-2]} {output}")
+            os.system(f"cd {dir_path}/../cmake-build-release && Proyecto.exe union {dir_path}/{file[-1]} {dir_path}/{file[-2]} {output}")
             self.world.element = self.world.element[:-2]
 
             with open(output, 'r') as file:
@@ -174,7 +174,7 @@ class Window(pyglet.window.Window):
             dir_path = os.path.dirname(os.path.realpath(__file__))
             output = f"{dir_path}/volume.txt"
             file = self.world.files[-1]
-            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe volume {dir_path}/{file} {output}")
+            os.system(f"cd {dir_path}/../cmake-build-release && Proyecto.exe volume {dir_path}/{file} {output}")
             
             with open(output, 'r') as file:
                 data = file.read()
@@ -187,7 +187,7 @@ class Window(pyglet.window.Window):
             dir_path = os.path.dirname(os.path.realpath(__file__))
             output = f"{dir_path}/inside.txt"
             file = self.world.files[-1]
-            os.system(f"cd {dir_path}/../cmake-build-debug && Proyecto.exe is_inside {dir_path}/{file} {x_str} {y_str} {z_str} {output}")
+            os.system(f"cd {dir_path}/../cmake-build-release && Proyecto.exe is_inside {dir_path}/{file} {x_str} {y_str} {z_str} {output}")
 
             with open(output, 'r') as file:
                 data = file.read()

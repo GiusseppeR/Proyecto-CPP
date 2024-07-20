@@ -186,7 +186,6 @@ int main(int argc, char *argv[]) {
             std::vector<Point> points_intersection = poly1.intersection(poly2);
 
             std::ofstream input_api;
-            std::cout << argv[4];
             input_api.open(argv[4]);
             input_api << "[";
             int i = 0;
@@ -214,9 +213,6 @@ int main(int argc, char *argv[]) {
             input_api << union_polyhedron;
             input_api << "]";
             input_api.close();
-        } else {
-            std::cout << argc;
-
         }
     }
 
