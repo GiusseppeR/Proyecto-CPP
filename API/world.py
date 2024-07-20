@@ -1,6 +1,6 @@
 import pyglet
 from pyglet.gl import *
-from objects import Cube, Polyhedron,Sphere,Axes
+from objects import Cube, ConvexPolyhedron,Sphere,Axes
 import numpy as np
 
 class World:
@@ -19,7 +19,7 @@ class World:
 
     def consolidate_points(self):
         if len(self.points) > 3:
-            self.element.append(Polyhedron(np.array(self.points)))
+            self.element.append(ConvexPolyhedron(np.array(self.points)))
             self.points.clear()
             self.spheres.clear()
 

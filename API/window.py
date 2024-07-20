@@ -83,6 +83,7 @@ class Window(pyglet.window.Window):
         cube = "cube"
         random_poly = "rd poly"
         move = r'^move (\d+) (-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+),(-?\d*\.\d+|-?\d+)$'
+        non_convex_test = "nonconvex poly"
 
         if re.match(add_point,string):
             x_str, y_str, z_str = re.match(add_point,string).groups()
@@ -103,7 +104,7 @@ class Window(pyglet.window.Window):
 
         if string == random_poly:
             points = np.random.uniform(-1, 1,(30,3))
-            self.world.addModel(obj.Polyhedron(points))
+            self.world.addModel(obj.ConvexPolyhedron(points))
             self.add_polyhedron_label()
             self.update_point_label()
             return
@@ -119,6 +120,12 @@ class Window(pyglet.window.Window):
 
             self.world.move_element(i,(x,y,z))
             return
+        
+        if string == non_convex_test:
+            self.world.addModel(obj.Polyhedron())
+            self.add_polyhedron_label()
+            self.update_point_label()
+            return
 
     def on_mouse_drag(self, x, y, dx, dy, buttons, modifiers):
         self.rx += dx * 0.5
@@ -130,7 +137,6 @@ class Window(pyglet.window.Window):
     def on_text(self,text):
         if self.input_active and text != '  ':
             self.input_text += text
-            print(text)
 
     def on_key_press(self,symbol, modifiers):
         if symbol == pyglet.window.key.TAB:
